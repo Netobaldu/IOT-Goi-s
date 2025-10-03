@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body {
@@ -88,13 +88,12 @@
     </header>
 
     <main class="container mx-auto px-6 space-y-24 md:space-y-32 pb-24">
-
         <!-- Seção 1: O Imperativo da Qualificação -->
         <section class="fade-in">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
                     <h2 class="section-title">O Imperativo da Qualificação Profissional</h2>
-                    <p class="mt-4 text-slate-600">O Parecer Técnico destaca a previsão do Fórum Econômico Mundial. O relatório "Future of Jobs 2023" confirma que, nos próximos 5 anos, <span class="font-bold text-slate-800">a demanda por especialistas em IA, Big Data e IoT crescerá mais de 30%</span>. A mesma fonte aponta que <span class="font-bold text-slate-800">44% das competências essenciais dos trabalhadores serão transformadas</span>, evidenciando a urgência de uma formação superior alinhada a esta realidade.</p>
+                    <p class="mt-4 text-slate-600">O Parecer Técnico destaca a previsão do Fórum Econômico Mundial. O relatório "Future of Jobs" confirma que, nos próximos 5 anos, <span class="font-bold text-slate-800">a demanda por especialistas em IA, Big Data e IoT crescerá mais de 30%</span> e que <span class="font-bold text-slate-800">44% das competências essenciais dos trabalhadores serão transformadas</span>, evidenciando a urgência de uma formação superior alinhada a esta realidade.</p>
                     <div class="mt-6 rounded-lg overflow-hidden">
                         <button class="interactive-btn w-full p-3 text-left font-bold flex justify-between items-center">
                             <span>Análise e Sustentação ao Parecer</span>
@@ -102,13 +101,15 @@
                         </button>
                         <div class="analysis-panel pl-4 pr-2">
                             <p class="font-semibold text-slate-800">Alinhamento com o Parecer:</p>
-                            <p class="text-sm text-slate-600">Este cenário global valida a justificativa do parecer sobre a "crescente demanda por profissionais qualificados". O curso proposto pelo SENAI Fatesg responde diretamente à necessidade de requalificação ("reskilling") e aprimoramento ("upskilling"), posicionando-se como uma solução estratégica para a carência de mão de obra que o documento aponta, especialmente no Centro-Oeste.</p>
+                            <p class="text-sm text-slate-600">Este cenário global valida a justificativa do parecer sobre a "crescente demanda por profissionais qualificados". O curso proposto pelo SENAI Fatesg responde diretamente à necessidade de requalificação, posicionando-se como uma solução estratégica para a carência de mão de obra.</p>
                         </div>
                     </div>
                 </div>
                 <div class="order-1 md:order-2 card rounded-xl p-6">
                     <h3 class="font-bold text-xl text-center mb-4">Competências em Transformação até 2027</h3>
-                    <canvas id="skillsChart"></canvas>
+                    <div class="relative h-80">
+                        <canvas id="skillsChart"></canvas>
+                    </div>
                     <p class="text-xs text-center mt-2 text-slate-500">
                         Fonte: World Economic Forum, The Future of Jobs Report 2023.
                     </p>
@@ -119,11 +120,11 @@
         <!-- Seção 2: Goiás como Epicentro da Demanda -->
         <section class="fade-in text-center">
             <h2 class="section-title">Goiás: Epicentro da Demanda por IoT</h2>
-            <p class="mt-4 text-slate-600 max-w-3xl mx-auto">Conforme o parecer, a força da <span class="font-bold">Indústria 4.0</span> e do <span class="font-bold">Agronegócio</span> em Goiás cria o ambiente ideal para a aplicação de IoT. O estado registrou um <span class="font-bold">crescimento industrial de 4,3% em 2024</span>, acima da média nacional. O agronegócio, por sua vez, busca incessantemente por tecnologia para otimizar a produção.</p>
+            <p class="mt-4 text-slate-600 max-w-3xl mx-auto">A força da <span class="font-bold">Indústria 4.0</span> e do <span class="font-bold">Agronegócio</span> em Goiás cria o ambiente ideal para a aplicação de IoT. O estado registrou um <span class="font-bold">crescimento industrial de 4,3% em 2024</span>, acima da média nacional. O agronegócio, por sua vez, busca incessantemente por tecnologia para otimizar a produção.</p>
             <div class="grid md:grid-cols-2 gap-12 mt-12 items-center">
                 <div class="card rounded-xl p-6">
                     <h3 class="font-bold text-xl text-center mb-4">Principais Setores de Aplicação de IoT no Brasil (%)</h3>
-                    <div class="max-w-md mx-auto">
+                    <div class="relative h-80 max-w-md mx-auto">
                         <canvas id="demandChart"></canvas>
                     </div>
                     <p class="text-xs text-center mt-2 text-slate-500">
@@ -138,10 +139,52 @@
                         </button>
                         <div class="analysis-panel pl-4 pr-2">
                              <p class="font-semibold text-slate-800">Alinhamento com o Parecer:</p>
-                            <p class="text-sm text-slate-600">Os dados confirmam a "expansão de setores intensivos em automação" citada no parecer. Os dois maiores demandantes de IoT no Brasil (Indústria e Agro) são os pilares da economia goiana, especialmente nos polos de <span class="font-bold">Goiânia</span> e <span class="font-bold">Anápolis</span>. O curso, portanto, possui aderência total ao mercado local, formando profissionais para vagas reais e estratégicas, o que reforça o argumento de "contribuição direta do curso para a empregabilidade".</p>
+                            <p class="text-sm text-slate-600">Os dados confirmam a "expansão de setores intensivos em automação". Os dois maiores demandantes de IoT (Indústria e Agro) são os pilares da economia goiana. O curso, portanto, possui aderência total ao mercado local, formando profissionais para vagas reais e estratégicas, reforçando o argumento de "contribuição direta para a empregabilidade".</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: Visão de Futuro e Transformação Digital -->
+        <section class="fade-in">
+            <div class="text-center">
+                <h2 class="section-title">Visão de Futuro e a Transformação Digital</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">Entidades como CNI, Semesp e o Fórum Econômico Mundial convergem em um ponto: a transformação digital, impulsionada por IoT e IA, não é uma tendência, mas a nova realidade do mercado de trabalho, exigindo uma rápida adaptação na formação profissional.</p>
+            </div>
+            <div class="mt-12 grid md:grid-cols-2 gap-12 items-center">
+                <div class="card rounded-xl p-6 order-2 md:order-1">
+                    <h3 class="font-bold text-xl text-center mb-4">O Futuro do Emprego até 2030</h3>
+                    <div class="relative h-80">
+                        <canvas id="wefChart"></canvas>
+                    </div>
+                     <p class="text-xs text-center mt-2 text-slate-500">Fonte: World Economic Forum, "The Future of Jobs Report 2025".</p>
+                     <p class="mt-4 text-sm text-slate-600 text-center"><b>Legenda Explicativa:</b> O gráfico ilustra a dinâmica de transformação do mercado. A criação de milhões de novos postos, majoritariamente em tecnologia, valida a necessidade de cursos como o de IoT para preparar a força de trabalho para as profissões do futuro.</p>
+                </div>
+                <div class="space-y-6 order-1 md:order-2">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <p><b class="text-blue-700">Visão da CNI:</b> A Confederação Nacional da Indústria aponta a IoT como pilar para a competitividade, demandando profissionais qualificados para a crescente automação e integração de sistemas nas fábricas.</p>
+                    </div>
+                     <div class="bg-white p-4 rounded-lg border">
+                        <p><b class="text-blue-700">Visão da Semesp:</b> O sindicato evidencia a alta procura por cursos de IoT e IA, essenciais para os novos modelos de negócio e para a criação de novas profissões na área de tecnologia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: Mercado de Trabalho Aquecido -->
+        <section class="fade-in">
+            <div class="text-center">
+                <h2 class="section-title">Mercado de Trabalho Aquecido na Região</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">A região Centro-Oeste demonstra um dinamismo econômico expressivo, com a geração de milhares de novos empregos. A expansão dos setores de Serviços e Comércio, cada vez mais digitalizados, impulsiona a demanda por especialistas em tecnologia.</p>
+            </div>
+            <div class="mt-12 card rounded-xl p-6">
+                <h3 class="font-bold text-xl text-center mb-4">Geração de Empregos Formais no Centro-Oeste (Saldo de 2023)</h3>
+                <div class="relative h-96">
+                    <canvas id="jobsChart"></canvas>
+                </div>
+                <p class="text-xs text-center mt-2 text-slate-500">Fonte: MTE, Mapa do Emprego Formal (Dados de 2023).</p>
+                <p class="mt-4 text-sm text-slate-600 text-center"><b>Legenda Explicativa:</b> O gráfico mostra que o setor de Serviços, o maior empregador da região, é também o que mais cresce. A digitalização deste setor (em áreas como logística, saúde e finanças) é uma grande fonte de vagas para profissionais de IoT, que criam as soluções para otimizar essas operações.</p>
             </div>
         </section>
 
@@ -149,12 +192,14 @@
         <section class="fade-in">
             <div class="text-center">
                 <h2 class="section-title">Perfil do Egresso e Retorno Profissional</h2>
-                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">O parecer elogia a "matriz curricular robusta" do curso. Essa formação completa capacita o egresso a ocupar posições de alto valor agregado, refletidas em remunerações competitivas e com grande potencial de crescimento, suprindo a carência de profissionais com visão sistêmica.</p>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">O parecer elogia a "matriz curricular robusta" do curso. Essa formação completa capacita o egresso a ocupar posições de alto valor agregado, refletidas em remunerações competitivas, conforme detalhado no Guia Brasileiro de Ocupações (MTE).</p>
             </div>
             <div class="mt-12">
                 <div class="card rounded-xl p-6">
                     <h3 class="font-bold text-xl text-center mb-4">Potencial Salarial em Goiânia para Carreiras em IoT (R$)</h3>
-                    <canvas id="salaryChart"></canvas>
+                    <div class="relative h-96">
+                        <canvas id="salaryChart"></canvas>
+                    </div>
                     <p class="text-xs text-center mt-2 text-slate-500">
                         Fonte: Salario.com.br (dados CAGED, Set. 2025).
                     </p>
@@ -167,7 +212,7 @@
                 </button>
                 <div class="analysis-panel pl-4 pr-2">
                     <p class="font-semibold text-slate-800">Alinhamento com o Parecer:</p>
-                    <p class="text-sm text-slate-600">O alto potencial de remuneração valida a "relevância da formação proposta". Um curso superior que habilita para salários com teto superior a R$ 12.000,00 demonstra alto valor agregado e justifica o investimento do aluno e da instituição. Isso reforça a "consistência pedagógica do PPC" mencionada no parecer, pois a estrutura curricular leva a resultados profissionais concretos e de alto impacto para a "competitividade industrial no estado de Goiás".</p>
+                    <p class="text-sm text-slate-600">O alto potencial de remuneração valida a "relevância da formação proposta". Um curso que habilita para salários com teto superior a R$ 12.000,00 demonstra alto valor agregado e reforça a "consistência pedagógica do PPC", pois a estrutura curricular leva a resultados profissionais de alto impacto para a "competitividade industrial".</p>
                 </div>
             </div>
         </section>
@@ -189,18 +234,19 @@
             <h2 class="section-title">Conclusão do Parecer</h2>
             <p class="mt-4 text-slate-700 max-w-3xl mx-auto text-lg">Diante da consistência pedagógica, da pertinência socioeconômica e tecnológica, da infraestrutura adequada e da aprovação unânime do CONSUP, recomenda-se o <span class="font-bold text-green-700">DEFERIMENTO</span> da autorização para a oferta do Curso Superior de Tecnologia em Internet das Coisas.</p>
         </section>
-
     </main>
     
     <footer class="text-center p-8 mt-16 bg-slate-800 text-white">
         <div class="container mx-auto">
             <h3 class="font-bold text-lg">Fontes de Informação para Consulta</h3>
             <ul class="mt-4 text-sm space-y-2 text-slate-300 max-w-4xl mx-auto">
-                <li><span class="font-bold">Parecer GEP nº 58/2025:</span> Documento Interno - Autorização do CST em Internet das Coisas.</li>
-                <li><span class="font-bold">Fórum Econômico Mundial:</span> <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2023/" target="_blank" class="source-link">The Future of Jobs Report 2023</a>.</li>
+                <li><span class="font-bold">CNI - Mapa Estratégico:</span> <a href="https://www.portaldaindustria.com.br/cni/canais/mapa-estrategico-da-industria/prestacao-de-contas/politica-industrial-de-inovacao-e-de-comercio-exterior/politica-industrial-e-de-inovacao/ampliar-o-emprego-de-tecnologias-associadas-a-industria-40-e-a-internet-das-coisas/" target="_blank" class="source-link">Indústria 4.0 e Internet das Coisas</a>.</li>
+                <li><span class="font-bold">Semesp:</span> <a href="https://www.semesp.org.br/uc/" target="_blank" class="source-link">Universidade Corporativa</a>.</li>
+                <li><span class="font-bold">Fórum Econômico Mundial:</span> <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2023/" target="_blank" class="source-link">The Future of Jobs Report</a>.</li>
+                <li><span class="font-bold">MTE - Emprego Formal:</span> <a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/estatisticas-trabalho/mapa-do-emprego-formal" target="_blank" class="source-link">Mapa do Emprego Formal</a>.</li>
+                <li><span class="font-bold">Guia Brasileiro de Ocupações:</span> <a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/estatisticas-trabalho/guia-brasileiro-de-ocupacoes" target="_blank" class="source-link">MTE - GBO</a>.</li>
                 <li><span class="font-bold">Panorama IoT no Brasil:</span> <a href="https://www.logicalis.com/br/insights/pesquisas-e-relatorios/iot-ia-benchmark-2024/" target="_blank" class="source-link">ABINC/Logicalis IoT & IA Benchmark 2024</a>.</li>
-                <li><span class="font-bold">Crescimento Industrial:</span> <a href="https://www.portaldaindustria.com.br/estatisticas/indicadores-industriais/" target="_blank" class="source-link">CNI - Indicadores Industriais (Consolidado Nacional e Regional)</a>.</li>
-                <li><span class="font-bold">Dados Salariais:</span> <a href="https://www.salario.com.br/" target="_blank" class="source-link">Salario.com.br (Base de dados do Novo CAGED/eSocial)</a>.</li>
+                <li><span class="font-bold">Dados Salariais:</span> <a href="https://www.salario.com.br/" target="_blank" class="source-link">Salario.com.br (Base CAGED/eSocial)</a>.</li>
             </ul>
         </div>
     </footer>
@@ -210,6 +256,8 @@
         Chart.register(ChartDataLabels);
 
         const globalChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: { labels: { color: '#334155', font: { family: "'Inter', sans-serif" } } },
                 datalabels: { color: '#ffffff', font: { weight: 'bold', family: "'Inter', sans-serif" } }
@@ -223,20 +271,14 @@
                 datasets: [{
                     label: 'Competências mais importantes (Top 5)',
                     data: [86, 73, 60, 52, 49],
-                    backgroundColor: '#0071bb',
-                    borderColor: '#00538a',
-                    borderWidth: 1
+                    backgroundColor: '#0071bb'
                 }]
             },
             options: { ...globalChartOptions,
                 plugins: { ...globalChartOptions.plugins,
-                    datalabels: {
-                         formatter: (value) => `${value}%`,
-                         anchor: 'end',
-                         align: 'end',
-                         color: '#1e293b'
-                    },
-                    tooltip: { callbacks: { label: (context) => ` ${context.parsed.y}% dos entrevistados consideram essencial` } }
+                    legend: { display: false },
+                    datalabels: { formatter: (v) => `${v}%`, anchor: 'end', align: 'end', color: '#1e293b'},
+                    tooltip: { callbacks: { label: (c) => ` ${c.parsed.y}% dos entrevistados consideram essencial` } }
                 },
                 scales: {
                     y: { beginAtZero: true, max: 100, ticks: { color: '#475569' }, grid: { color: '#e2e8f0' } },
@@ -250,7 +292,6 @@
             data: {
                 labels: ['Indústria', 'Agronegócio', 'Logística', 'Cidades Inteligentes', 'Varejo', 'Saúde'],
                 datasets: [{
-                    label: 'Demanda por Setor (%)',
                     data: [25, 22, 18, 15, 12, 8],
                     backgroundColor: ['#00538a', '#0071bb', '#2596be', '#65b3d0', '#94cde0', '#c2e7f0'],
                     borderColor: '#f8fafc',
@@ -259,14 +300,69 @@
             },
             options: { ...globalChartOptions,
                 plugins: { ...globalChartOptions.plugins,
-                    legend: { position: 'bottom', labels: { color: '#334155', font: { family: "'Inter', sans-serif" } } },
-                    datalabels: {
-                         formatter: (value) => `${value}%`
-                    }
+                    legend: { position: 'bottom' },
+                    datalabels: { formatter: (v) => `${v}%` }
                 }
             }
         });
         
+        new Chart(document.getElementById('wefChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Empregos em Transformação', 'Empregos Estáveis'],
+                datasets: [{
+                    data: [22, 78],
+                    backgroundColor: ['#0071bb', '#e2e8f0'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                }]
+            },
+            options: { ...globalChartOptions,
+                cutout: '60%',
+                plugins: {
+                    legend: { display: false },
+                    datalabels: {
+                        formatter: (value, context) => {
+                            if (context.dataIndex === 0) return `${value}%\nEM\nMUDANÇA`;
+                            return null;
+                        },
+                        color: '#00538a',
+                        font: { weight: 'bold', size: 16 },
+                        textAlign: 'center'
+                    },
+                }
+            }
+        });
+
+        new Chart(document.getElementById('jobsChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Serviços', 'Comércio', 'Indústria', 'Construção', 'Agropecuária'],
+                datasets: [{
+                    label: 'Saldo de Vagas Formais em 2023',
+                    data: [115420, 35820, 19900, 17910, 9950],
+                    backgroundColor: '#0071bb'
+                }]
+            },
+            options: { ...globalChartOptions,
+                indexAxis: 'y',
+                 plugins: {
+                    legend: { display: false },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'end',
+                        color: '#1e293b',
+                        font: { size: 12 },
+                        formatter: (value) => value.toLocaleString('pt-BR')
+                    }
+                },
+                scales: {
+                    x: { ticks: { display: false }, grid: { display: false }, suggestedMax: 125000 },
+                    y: { ticks: { color: '#475569' }, grid: { display: false } }
+                }
+            }
+        });
+
         new Chart(document.getElementById('salaryChart').getContext('2d'), {
             type: 'bar',
             data: {
@@ -274,24 +370,20 @@
                 datasets: [{
                     label: 'Teto Salarial (R$)',
                     data: [12150, 12000, 8100],
-                    backgroundColor: '#0071bb',
-                    borderColor: '#00538a',
-                    borderWidth: 1,
+                    backgroundColor: '#0071bb'
                 }, {
                     label: 'Média Salarial (R$)',
                     data: [5250, 8300, 4200],
-                    backgroundColor: '#94cde0',
-                    borderColor: '#65b3d0',
-                    borderWidth: 1,
+                    backgroundColor: '#94cde0'
                 }]
             },
             options: { ...globalChartOptions,
                 plugins: { ...globalChartOptions.plugins,
                     datalabels: { display: false },
-                    tooltip: { callbacks: { label: (context) => ` ${context.dataset.label}: R$ ${context.parsed.y.toLocaleString('pt-BR')}` } }
+                    tooltip: { callbacks: { label: (c) => ` ${c.dataset.label}: R$ ${c.parsed.y.toLocaleString('pt-BR')}` } }
                 },
                 scales: {
-                    y: { beginAtZero: true, ticks: { color: '#475569', callback: (value) => `R$ ${value/1000}k` }, grid: { color: '#e2e8f0' } },
+                    y: { beginAtZero: true, ticks: { color: '#475569', callback: (v) => `R$ ${v/1000}k` }, grid: { color: '#e2e8f0' } },
                     x: { ticks: { color: '#475569' }, grid: { display: false } }
                 }
             }
