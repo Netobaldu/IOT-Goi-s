@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: O Futuro é Conectado - Graduação em IoT em Goiás</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Plugin para exibir os rótulos de dados nos gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f1f5f9;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(51, 65, 85, 0.7);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-5px);
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Estilos para a análise interativa */
+        .interactive-btn {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .interactive-btn:hover {
+            background-color: #334155;
+            border-color: #4f46e5;
+        }
+        .analysis-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            border-left: 3px solid #3b82f6;
+            background-color: rgba(30, 41, 59, 0.3);
+        }
+        .analysis-panel.open {
+            max-height: 500px; /* Altura suficiente para o conteúdo */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="container mx-auto px-6 pt-16 pb-12 text-center">
+        <!-- LOGOMARCA INSERIDA -->
+        <img src="https://i.postimg.cc/MTx9rb1S/det-gep-senai.png" alt="Logomarca SENAI Goiás" class="h-20 w-auto mx-auto mb-10">
+
+        <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+            <span class="gradient-text">O Futuro é Conectado:</span><br>A Urgência da Graduação em IoT em Goiás
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+            Uma análise estratégica para as Faculdades SENAI sobre a demanda crítica por profissionais de Internet das Coisas em <span class="font-bold text-blue-400">Goiânia</span> e <span class="font-bold text-blue-400">Anápolis</span>.
+        </p>
+    </header>
+
+    <main class="container mx-auto px-6 space-y-24 md:space-y-32 pb-24">
+
+        <!-- Seção 1: Boom da IA e Mercado Nacional -->
+        <section class="fade-in">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="section-title">Mercado em Ebulição:<br>O Boom da <span class="gradient-text">IA</span> e <span class="gradient-text">IoT</span></h2>
+                    <p class="mt-4 text-slate-400">A convergência da Inteligência Artificial (IA) com a Internet das Coisas (AIoT) não é uma tendência futura, é a realidade que impulsiona a economia digital. Em Goiás, <span class="font-bold text-white">48% das empresas já utilizam IA</span>, superando outros polos tecnológicos. Essa rápida adoção cria uma demanda massiva por profissionais que saibam não apenas conectar dispositivos, mas extrair valor e inteligência dos dados gerados.</p>
+                    <div class="mt-6 rounded-lg overflow-hidden">
+                        <button class="interactive-btn w-full p-3 text-left font-bold flex justify-between items-center">
+                            <span>Clique para ver a Análise Interativa</span>
+                            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="analysis-panel pl-4 pr-2">
+                            <p class="font-semibold text-blue-300">Justificativa do Bloco:</p>
+                            <p class="text-sm text-slate-400">A alta adesão à IA pelas empresas goianas é um indicador claro de maturidade e prontidão do mercado. Um curso de IoT com foco em IA e análise de dados posicionará o SENAI como a principal fonte de talentos para essa nova economia, atendendo uma necessidade imediata e estratégica do setor produtivo. A projeção de crescimento de <span class="font-bold text-white">8.5 para 352 bilhões de dólares</span> em 7 anos no Brasil mostra que a demanda não é passageira, mas sim o alicerce da próxima revolução industrial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 card rounded-xl p-6">
+                     <h3 class="font-bold text-xl text-center mb-4">Projeção do Mercado IoT no Brasil (em Bilhões de US$)</h3>
+                    <canvas id="marketChart"></canvas>
+                    <p class="text-xs text-center mt-2 text-slate-500">Fonte: Cisco & MCom (Relatório de Tendências Digitais, 2024). Período da projeção: 2025-2030.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: A Demanda Setorial em Goiás -->
+        <section class="fade-in text-center">
+            <h2 class="section-title">O Epicentro da Demanda: Onde Estão as Vagas em Goiás?</h2>
+            <p class="mt-4 text-slate-400 max-w-3xl mx-auto">A demanda por IoT em Goiás é impulsionada por suas duas maiores potências econômicas: a Indústria, que representa 21,2% do PIB estadual, e o Agronegócio, que emprega mais de 26% da população ocupada.</p>
+            <div class="grid md:grid-cols-2 gap-8 mt-12 items-center">
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-center mb-4">Demanda por Setor no Brasil (%)</h3>
+                    <div class="max-w-md mx-auto">
+                        <canvas id="demandChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center mt-2 text-slate-500">Fonte: ABINC - Associação Brasileira de Internet das Coisas (Panorama IoT 2024-2025).</p>
+                </div>
+                <div class="text-left p-4 self-center">
+                    <div class="rounded-lg overflow-hidden">
+                        <button class="interactive-btn w-full p-3 text-left font-bold flex justify-between items-center">
+                            <span>Clique para ver a Análise Interativa</span>
+                             <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="analysis-panel pl-4 pr-2">
+                            <p class="font-semibold text-blue-300">Justificativa do Bloco:</p>
+                            <p class="text-sm text-slate-400">Os dois setores que mais demandam IoT no país (<span class="font-bold text-white">Indústria 4.0</span> e <span class="font-bold text-white">Agronegócio</span>, ambos com 12.7%) são justamente os pilares da economia de Goiânia e, especialmente, de Anápolis (com seu polo farmoquímico e o DAIA). Isso representa uma sinergia perfeita. O curso não formará profissionais para um mercado abstrato, mas para vagas reais e estratégicas que existem na porta de casa, atendendo diretamente ao <span class="font-semibold text-white">Plano Nacional de IoT (Decreto nº 9.854/2019)</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: O Gap de Profissionais -->
+        <section class="fade-in">
+             <div class="text-center">
+                <h2 class="section-title">A Escassez Crítica de Talentos</h2>
+                <p class="mt-4 text-slate-400 max-w-3xl mx-auto">A tecnologia avança mais rápido que a formação de pessoas. O resultado é um "gap" de competências que impede as empresas de inovarem. O profissional de IoT é, por natureza, multidisciplinar, e a formação tradicional, focada em apenas uma área, não supre essa necessidade.</p>
+            </div>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Hardware -->
+                <div class="card rounded-xl p-6 text-center">
+                    <div class="mx-auto bg-slate-700/50 rounded-full h-16 w-16 flex items-center justify-center border-2 border-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cpu-fill text-blue-400" viewBox="0 0 16 16"><path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/><path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5z"/></svg></div>
+                    <h3 class="font-bold text-lg mt-4">Hardware e Embarcados</h3>
+                    <p class="text-sm text-slate-400 mt-2">Faltam profissionais que entendam de eletrônica, sensores e microcontroladores para criar a "coisa".</p>
+                </div>
+                <!-- Card 2: Conectividade -->
+                <div class="card rounded-xl p-6 text-center">
+                    <div class="mx-auto bg-slate-700/50 rounded-full h-16 w-16 flex items-center justify-center border-2 border-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-broadcast text-blue-400" viewBox="0 0 16 16"><path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656 0a4 4 0 0 0-5.656 0 .5.5 0 1 1-.708-.708 5 5 0 0 1 7.072 0 .5.5 0 0 1-.708.708zm-2.122 2.122a1.5 1.5 0 0 0-2.12 0 .5.5 0 1 1-.708-.708 2.5 2.5 0 0 1 3.536 0 .5.5 0 0 1-.708.708zM12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg></div>
+                    <h3 class="font-bold text-lg mt-4">Redes e Conectividade</h3>
+                    <p class="text-sm text-slate-400 mt-2">Especialistas em redes (5G, LoRaWAN) e segurança cibernética para garantir a comunicação.</p>
+                </div>
+                 <!-- Card 3: Software e Dados -->
+                 <div class="card rounded-xl p-6 text-center">
+                    <div class="mx-auto bg-slate-700/50 rounded-full h-16 w-16 flex items-center justify-center border-2 border-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cloud-arrow-up-fill text-blue-400" viewBox="0 0 16 16"><path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/></svg></div>
+                    <h3 class="font-bold text-lg mt-4">Software, Nuvem e IA</h3>
+                    <p class="text-sm text-slate-400 mt-2">Desenvolvedores de software e cientistas de dados para transformar informação em valor.</p>
+                </div>
+            </div>
+            <div class="mt-8 rounded-lg overflow-hidden">
+                <button class="interactive-btn w-full p-3 text-left font-bold flex justify-between items-center">
+                    <span>Clique para ver a Análise Interativa</span>
+                     <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="analysis-panel pl-4 pr-2">
+                    <p class="font-semibold text-blue-300">Justificativa do Bloco:</p>
+                    <p class="text-sm text-slate-400">A natureza multidisciplinar de IoT (hardware + redes + software) é exatamente o motivo da escassez de profissionais. A proposta de um <span class="font-bold text-white">Curso Superior de Tecnologia</span> é a solução ideal, pois forma um profissional com visão sistêmica, capaz de atuar em todas as camadas de um projeto. O SENAI pode preencher essa lacuna de forma única, integrando a expertise que já possui em Automação Industrial e Análise de Sistemas para criar uma formação completa e diferenciada.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Salários e Carreiras -->
+        <section class="fade-in">
+            <div class="text-center">
+                <h2 class="section-title">Carreiras de Alto Impacto e Salários Competitivos</h2>
+                <p class="mt-4 text-slate-400 max-w-3xl mx-auto">A alta demanda e a escassez de talentos resultam em salários atrativos. O egresso do curso do SENAI poderá ocupar diversas posições estratégicas, formalizadas pela Classificação Brasileira de Ocupações (CBO).</p>
+            </div>
+            <div class="mt-12">
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-center mb-4">Média Salarial em Goiânia (Piso e Teto)</h3>
+                    <canvas id="salaryChart"></canvas>
+                    <p class="text-xs text-center mt-2 text-slate-500">Fonte: Salario.com.br com dados do Novo CAGED (Consolidado Jan-Ago 2025) para Goiânia, GO. *Engenheiro baseado no piso da categoria.</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="card rounded-xl p-6"><h4 class="font-bold text-lg text-blue-400">Desenvolvedor de Sistemas IoT / Embarcados</h4><p class="text-sm font-semibold text-slate-300 mt-1">CBO 2124-05</p><p class="text-sm text-slate-400 mt-2">Cria o cérebro dos dispositivos e as plataformas em nuvem. Essencial para empresas de tecnologia, startups e indústria.</p></div>
+                <div class="card rounded-xl p-6"><h4 class="font-bold text-lg text-blue-400">Especialista em Automação e IoT Industrial</h4><p class="text-sm font-semibold text-slate-300 mt-1">CBO 2021-10</p><p class="text-sm text-slate-400 mt-2">Integra sensores e robôs no chão de fábrica, otimizando a produção. Foco em indústrias de Anápolis e Aparecida de Goiânia.</p></div>
+                <div class="card rounded-xl p-6 lg:col-span-1 md:col-span-2"><h4 class="font-bold text-lg text-blue-400">Analista de Dados e Conectividade IoT</h4><p class="text-sm font-semibold text-slate-300 mt-1">CBO 2124-10</p><p class="text-sm text-slate-400 mt-2">Garante a segurança e a análise dos dados, transformando-os em insights. Crítico para o agronegócio e logística.</p></div>
+            </div>
+             <div class="mt-8 rounded-lg overflow-hidden">
+                <button class="interactive-btn w-full p-3 text-left font-bold flex justify-between items-center">
+                    <span>Clique para ver a Análise Interativa</span>
+                     <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="analysis-panel pl-4 pr-2">
+                    <p class="font-semibold text-blue-300">Justificativa do Bloco:</p>
+                    <p class="text-sm text-slate-400">Os salários, com pisos que superam R$ 4.700 para desenvolvedores e tetos que ultrapassam R$ 11.500, são um forte argumento para a viabilidade e atratividade do curso. Um profissional com diploma de nível superior tem um potencial de ganho significativamente maior. Isso justifica o investimento em uma graduação, pois o retorno financeiro para o aluno é claro e rápido, garantindo alta demanda de matrículas e valorização do diploma SENAI no mercado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: Futuro -->
+        <section class="fade-in text-center">
+            <h2 class="section-title">As Novas Fronteiras: Tendências e Profissões do Futuro</h2>
+            <p class="mt-4 text-slate-400 max-w-3xl mx-auto">O curso não preparará apenas para o hoje, mas para o amanhã. A evolução do 5G e da Edge Computing criará novas especialidades e funções ainda mais estratégicas.</p>
+            <div class="mt-12 grid md:grid-cols-2 gap-8 text-left">
+                <div class="card rounded-xl p-6"><h4 class="font-bold text-lg text-blue-400">Arquiteto de Soluções de Edge AI</h4><p class="text-sm text-slate-400 mt-2">Profissional que irá projetar sistemas onde a IA acontece na "borda" (no próprio dispositivo), crucial para carros autônomos e robótica industrial em tempo real.</p></div>
+                <div class="card rounded-xl p-6"><h4 class="font-bold text-lg text-blue-400">Especialista em Gêmeos Digitais (Digital Twins)</h4><p class="text-sm text-slate-400 mt-2">Criará simulações virtuais de processos industriais ou lavouras, alimentadas por dados em tempo real, para otimização e predição de falhas antes que aconteçam.</p></div>
+            </div>
+             <div class="mt-8 rounded-lg overflow-hidden">
+                <button class="interactive-btn w-full p-3 text-left font-bold flex justify-between items-center">
+                    <span>Clique para ver a Análise Interativa</span>
+                     <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="analysis-panel pl-4 pr-2">
+                    <p class="font-semibold text-blue-300">Justificativa do Bloco:</p>
+                    <p class="text-sm text-slate-400">Este bloco justifica a longevidade e a relevância contínua do curso. Ao incluir fundamentos de 5G, Edge Computing e IA no currículo, o SENAI formará profissionais <span class="font-bold text-white">à prova de futuro</span>, capazes de liderar a próxima onda de inovação. Isso diferencia a graduação de cursos técnicos mais básicos, garantindo que os egressos sejam os profissionais mais cobiçados do mercado por muitos anos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Conclusão -->
+        <section class="fade-in text-center bg-blue-600/10 border border-blue-500 rounded-xl p-8 md:p-12">
+            <h2 class="section-title">A Resposta Estratégica do SENAI Goiás</h2>
+            <p class="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">Diante da convergência de um mercado nacional aquecido, uma demanda local urgente e uma clara lacuna de talentos, a criação do <span class="font-bold text-white">Curso Superior de Tecnologia em Internet das Coisas</span> é a ação mais estratégica e necessária para o SENAI Goiás. O curso não apenas preencherá vagas, mas atuará como um <span class="font-bold">catalisador para a inovação</span>, solidificando a indústria e o agronegócio goiano como líderes na economia digital do Brasil.</p>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 border-t border-slate-800">
+        <p class="text-sm text-slate-500">Infográfico elaborado como subsídio para decisão estratégica das Faculdades SENAI Goiás.</p>
+        <p class="text-xs text-slate-600 mt-1">Fontes: Estudo de Viabilidade para Curso Superior em IoT; ABINC; Salario.com.br/CAGED; Planos Estratégicos do Governo de Goiás. Dados consolidados de 2024-2025.</p>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Registrar o plugin de datalabels globalmente
+        Chart.register(ChartDataLabels);
+
+        const globalChartOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#f1f5f9',
+                        font: { family: "'Inter', sans-serif" }
+                    }
+                },
+                datalabels: {
+                    color: '#ffffff',
+                    font: {
+                        weight: 'bold',
+                        family: "'Inter', sans-serif"
+                    }
+                }
+            },
+        };
+
+        // Gráfico 1: Mercado
+        new Chart(document.getElementById('marketChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['2023', '2025 (projeção)', '2030 (projeção)'],
+                datasets: [{
+                    label: 'Impacto Econômico (US$)',
+                    data: [8.5, 50, 352],
+                    backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...globalChartOptions,
+                plugins: {
+                    ...globalChartOptions.plugins,
+                    datalabels: {
+                         ...globalChartOptions.plugins.datalabels,
+                         formatter: (value) => `${value} bi`
+                    },
+                    tooltip: {
+                        callbacks: { label: (context) => ` ${context.dataset.label}: ${context.parsed.y} Bilhões` }
+                    }
+                },
+                scales: {
+                    y: { beginAtZero: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51, 65, 85, 0.5)' } },
+                    x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51, 65, 85, 0.5)' } }
+                }
+            }
+        });
+
+        // Gráfico 2: Demanda
+        new Chart(document.getElementById('demandChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Agronegócio', 'Indústria 4.0', 'Logística', 'Varejo', 'Utilities', 'Saúde'],
+                datasets: [{
+                    label: 'Demanda por Setor',
+                    data: [12.7, 12.7, 11.3, 9.9, 8.5, 7.0],
+                    backgroundColor: ['#22c55e', '#3b82f6', '#f97316', '#a855f7', '#eab308', '#ef4444'],
+                    borderColor: '#0a0a0a',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...globalChartOptions,
+                plugins: {
+                    ...globalChartOptions.plugins,
+                    legend: { position: 'bottom', labels: { color: '#f1f5f9', font: { family: "'Inter', sans-serif" } } },
+                    datalabels: {
+                         ...globalChartOptions.plugins.datalabels,
+                         formatter: (value) => `${value}%`
+                    }
+                }
+            }
+        });
+        
+        // Gráfico 3: Salários
+        new Chart(document.getElementById('salaryChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Desenvolvedor IoT', 'Analista de Redes IoT', 'Eng. Automação IoT*'],
+                datasets: [
+                {
+                    label: 'Piso Salarial (R$)',
+                    data: [4770, 3353, 7685],
+                    backgroundColor: 'rgba(37, 99, 235, 0.8)',
+                    borderColor: 'rgba(37, 99, 235, 1)',
+                    borderWidth: 1,
+                },
+                {
+                    label: 'Teto Salarial (R$)',
+                    data: [11531, 7937, 12000],
+                    backgroundColor: 'rgba(96, 165, 250, 0.8)',
+                    borderColor: 'rgba(96, 165, 250, 1)',
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                ...globalChartOptions,
+                indexAxis: 'y',
+                plugins: {
+                    ...globalChartOptions.plugins,
+                    datalabels: {
+                         ...globalChartOptions.plugins.datalabels,
+                         formatter: (value) => `R$ ${value.toLocaleString('pt-BR')}`,
+                         anchor: 'end',
+                         align: 'end',
+                         offset: 4,
+                         font: { size: 10 }
+                    },
+                    tooltip: {
+                        callbacks: { label: (context) => ` ${context.dataset.label}: R$ ${context.parsed.x.toFixed(2)}` }
+                    }
+                },
+                scales: {
+                    x: { beginAtZero: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51, 65, 85, 0.5)' } },
+                    y: { ticks: { color: '#f1f5f9', font: { family: "'Inter', sans-serif" } }, grid: { display: false } }
+                }
+            }
+        });
+
+        // Animação de Fade-in ao rolar
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        
+        // Lógica para Análise Interativa
+        document.querySelectorAll('.interactive-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const panel = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+                panel.classList.toggle('open');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
+
